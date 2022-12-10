@@ -10,8 +10,8 @@ const Projects = () => {
                 <h4 className='text-xl text-blue-900 font-semibold uppercase'>Portfolio</h4>
                 <h2 className='text-3xl font-bold uppercase mt-2'>Featured Works</h2>
             </header>
-            <div class="mt-10 ml-3">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="mt-10 ml-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div className="card bg-base-100 shadow-xl">
                         <figure><img src={resale_furniture_image} alt="Shoes" /></figure>
                         <div className="card-body">

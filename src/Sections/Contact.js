@@ -1,6 +1,19 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
+import {toast} from 'react-hot-toast';
 
 const Contact = () => {
+    const form = useRef();
+    const handleForm = event => {
+        event.preventDefault();
+
+        emailjs.sendForm('service_es1hqtb', 'template_wyn3a4u', form.current, '_p8j2B5ibh-br2Xtx')
+            .then((result) => {
+                toast.success('We got your email and we\'ll contact with you ASAP, Thanks');
+            }, (error) => {
+                console.log(error.text);
+            });
+    }
     return (
         <div className='my-16'>
             <header className='ml-3'>
@@ -8,7 +21,7 @@ const Contact = () => {
                 <h2 className='text-3xl font-bold uppercase mt-2'>Get In Touch</h2>
             </header>
             <div className='ml-3 mt-5'>
-                <form>
+                <form ref={form} onSubmit={handleForm}>
                     <div className="form-control w-1/2 mt-2">
                         <label className="label">
                             <span className="label-text">Name</span>
