@@ -6,6 +6,15 @@ const Contact = () => {
     const form = useRef();
     const handleForm = event => {
         event.preventDefault();
+        // const form = event.target;
+        // const name = form.name.value;
+        // const email = form.email.value;
+        // const message = form.message.value;
+        // const emailData = {
+        //     name,
+        //     email,
+        //     message
+        // };
 
         emailjs.sendForm('service_es1hqtb', 'template_wyn3a4u', form.current, '_p8j2B5ibh-br2Xtx')
             .then((result) => {
@@ -22,23 +31,23 @@ const Contact = () => {
             </header>
             <div className='ml-3 mt-5'>
                 <form ref={form} onSubmit={handleForm}>
-                    <div className="form-control w-1/2 mt-2">
+                    <div className="form-control lg:w-2/3 mt-2">
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="text" placeholder="name" className="input input-bordered" />
+                        <input type="text" name="user_name" placeholder="name" className="input input-bordered" />
                     </div>
-                    <div className="form-control w-1/2 mt-2">
+                    <div className="form-control lg:w-2/3 mt-2">
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="text" placeholder="email" className="input input-bordered" />
+                        <input type="text" name="user_email" placeholder="email" className="input input-bordered" />
                     </div>
-                    <div className="form-control w-1/2 mt-2">
+                    <div className="form-control lg:w-2/3 mt-2">
                         <label className="label">
                             <span className="label-text">Message</span>
                         </label>
-                        <textarea className="textarea textarea-bordered" placeholder="Write your message..."></textarea>
+                        <textarea name="message" className="textarea textarea-bordered" placeholder="Write your message..."></textarea>
                     </div>
                     <div className="form-control mt-6 w-1/2">
                         <button className="btn btn-primary">Contact with me</button>

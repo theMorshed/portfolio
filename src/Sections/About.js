@@ -11,8 +11,8 @@ const About = () => {
             </header>
             <div className="mt-5">
                 <div className="hero-content flex-col lg:flex-row items-start">
-                    <img src={portfolio_image} className="rounded-lg shadow-2xl w-1/3 h-[500px]" alt="portflio" />
-                    <div className='w-2/3 ml-10'>
+                    <img src={portfolio_image} className="rounded-lg shadow-2xl lg:w-1/3 h-[500px]" alt="portflio" />
+                    <div className='w-full lg:w-2/3 lg:ml-10'>
                         <h1 className="text-3xl font-semibold text-blue-900">
                             <TypewriterComponent options={{
                                 strings: ["This is Morshed and I'm a Full Stack Developer"],
@@ -21,7 +21,7 @@ const About = () => {
                             }}></TypewriterComponent>                        
                         </h1>
                         <p className="py-6 text-lg">Hi! My name is <span className='text-blue-900 font-semibold'>Manjur Morshed</span>. I am a MERN Stack Developer, and I'm very passionate and dedicated to my work. As a professional developer, I have acquired the skills and knowledge necessary to make your project a success.</p>
-                        <div className='flex justify-between text-lg'>
+                        <div className='xl:flex justify-between text-lg'>
                             <div>
                                 <p className='my-2'><strong>Location:</strong> Chattogram, Bangladesh</p>
                                 <p className='my-2'><strong>Study:</strong> University of Chittagong</p>
