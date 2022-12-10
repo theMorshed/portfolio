@@ -1,4 +1,7 @@
 import React from 'react';
+import resale_furniture_image from '../assets/images/resale_furniture.png';
+import psychologist_image from '../assets/images/psychologist.png';
+import programming_school_image from '../assets/images/programming_school.png';
 
 const Projects = () => {
     return (
@@ -10,7 +13,7 @@ const Projects = () => {
             <div class="mt-10 ml-3">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div className="card bg-base-100 shadow-xl">
-                        <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                        <figure><img src={resale_furniture_image} alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">
                                 Resale Furniture
@@ -23,7 +26,7 @@ const Projects = () => {
                         </div>
                     </div>
                     <div className="card bg-base-100 shadow-xl">
-                        <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                        <figure><img src={psychologist_image} alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">
                                 Psychologist - Portfolio
@@ -35,7 +38,7 @@ const Projects = () => {
                         </div>
                     </div>
                     <div className="card bg-base-100 shadow-xl">
-                        <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                        <figure><img src={programming_school_image} alt="Shoes" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">
                                 Programming School
