@@ -11,7 +11,7 @@ const Navbar = () => {
     return (
         <div className="navbar bg-base-100 py-6">
             <div className="navbar-start">
-                <Link to='/' className="btn btn-ghost normal-case text-xl">
+                <Link to='/' className="text-3xl font-bold uppercase text-blue-900">
                     <span>Morshed</span>
                 </Link>
             </div>

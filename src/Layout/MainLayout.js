@@ -4,7 +4,7 @@ import Navbar from '../Sections/Navbar';
 
 const MainLayout = () => {
     return (
-        <div className='w-3/4 mx-auto'>
+        <div className='w-7/12 mx-auto'>
             <Navbar></Navbar>
             <Outlet></Outlet>
         </div>
