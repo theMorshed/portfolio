@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaGithub } from 'react-icons/fa';
+import { HiLocationMarker, HiAcademicCap, HiMail, HiPlusCircle, HiPhone } from "react-icons/hi";
 import TypewriterComponent from 'typewriter-effect';
 import portfolio_image from '../assets/images/portfolio_picture.png';
 
@@ -23,18 +25,18 @@ const About = () => {
                         <p className="py-6 text-lg">Hi! My name is <span className='text-blue-900 font-semibold'>Manjur Morshed</span>. I am a MERN Stack Developer, and I'm very passionate and dedicated to my work. As a professional developer, I have acquired the skills and knowledge necessary to make your project a success.</p>
                         <div className='xl:flex justify-between text-lg'>
                             <div>
-                                <p className='my-2'><strong>Location:</strong> Chattogram, Bangladesh</p>
-                                <p className='my-2'><strong>Study:</strong> University of Chittagong</p>
-                                <p className='my-2'><strong>Mail:</strong> themorshedctg@gmail.com</p>
-                                <p className='my-2'><strong>Github:</strong> https://github.com/themorshed</p>
+                                <p className='my-2'><strong><HiLocationMarker className='inline text-xl mr-2'></HiLocationMarker>Location:</strong> Chattogram, Bangladesh</p>
+                                <p className='my-2'><strong><HiAcademicCap className='inline text-xl mr-2'></HiAcademicCap>Study:</strong> University of Chittagong</p>
+                                <p className='my-2'><strong><HiMail className='inline text-xl mr-2'></HiMail>Mail:</strong> themorshedctg@gmail.com</p>
+                                <p className='my-2'><strong><FaGithub className='inline text-xl mr-2'></FaGithub>Github:</strong> https://github.com/themorshed</p>
                             </div>
                             <div>
-                                <p className='my-2'><strong>Interests:</strong> Problem Solving</p>
-                                <p className='my-2'><strong>Degree:</strong> Bechelor of Science</p>
-                                <p className='my-2'><strong>Phone:</strong> +880-1825279798</p>
+                                <p className='my-2'><strong><HiPlusCircle className='inline text-xl mr-2'></HiPlusCircle>Interests:</strong> Problem Solving</p>
+                                <p className='my-2'><strong><HiAcademicCap className='inline text-xl mr-2'></HiAcademicCap>Degree:</strong> Bechelor of Science</p>
+                                <p className='my-2'><strong><HiPhone className='inline text-xl mr-2'></HiPhone>Phone:</strong> +880-1825279798</p>
                             </div>
                         </div>
-                        <a className="btn btn-primary bg-blue-900 mt-5" href="https://drive.google.com/file/d/13oUowEpmnyZmtkPdcg5L7M29VKd63FZ1/view?usp=share_link" target="_blank">
+                        <a className="btn btn-primary bg-blue-900 mt-5" href="https://drive.google.com/file/d/13oUowEpmnyZmtkPdcg5L7M29VKd63FZ1/view?usp=share_link" target="_blank" rel="noreferrer">
                             Download Resume
                         </a>
                     </div>
