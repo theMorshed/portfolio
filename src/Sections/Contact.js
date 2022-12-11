@@ -6,16 +6,7 @@ const Contact = () => {
     const form = useRef();
     const handleForm = event => {
         event.preventDefault();
-        // const form = event.target;
-        // const name = form.name.value;
-        // const email = form.email.value;
-        // const message = form.message.value;
-        // const emailData = {
-        //     name,
-        //     email,
-        //     message
-        // };
-
+        
         emailjs.sendForm('service_es1hqtb', 'template_wyn3a4u', form.current, '_p8j2B5ibh-br2Xtx')
             .then((result) => {
                 toast.success('We got your email and we\'ll contact with you ASAP, Thanks');
@@ -24,7 +15,7 @@ const Contact = () => {
             });
     }
     return (
-        <div className='my-16'>
+        <div id="contact" className='my-16'>
             <header className='ml-3'>
                 <h4 className='text-xl text-blue-900 font-semibold uppercase'>Contact</h4>
                 <h2 className='text-3xl font-bold uppercase mt-2'>Get In Touch</h2>
