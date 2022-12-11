@@ -16,28 +16,33 @@ const projectsData = [
         name: 'Resale Furniture',
         images: [furniture_one, furniture_two, furniture_three],
         desc: 'Used Product Sales Application. You can advertise your used product for resale and also you can buy old product.',
-        details: 'Resale Furniture is a Web Application for sale your used furniture. There is a seller and buyer role for user. Buyer can buy product and seller can sell their product and advertise it. This is an MERN stack Application which i made using React js, Express, Node and Mongodb.'
+        details: 'Resale Furniture is a Web Application for sale your used furniture. There is a seller and buyer role for user. Buyer can buy product and seller can sell their product and advertise it. This is an MERN stack Application which i made using React js, Express, Node and Mongodb.',
+        features: ['Resale furniture Ecommerce', 'Full Responsive (mobile, tablet, desktop view)', 'Beautiful UI/UX', 'Header and awesome navbar and footer', 'Full functional Dashboard', 'Full feature role management(seller, buyer and admin)', 'Firebase Authentication and Blog page'],
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'React', 'React Query', 'Axios', 'React Router Dom', 'React Hot Toast', 'Firebase', 'Daisy UI', 'Tailwind CSS', 'Express JS', 'Node JS']
     },
     {
         id: 2,
         name: 'Psychologist - Portfolio',
         images: [psychology_one, psychology_two, psychology_three],
         desc: 'This is Portfolio Application where you can showcase your service and product.',
-        details: 'Psychologist is a Portfolio Web Application for display and sale a specific personell. You can showcase your service with this application and give a superb treatment to patient.'
+        details: 'Psychologist is a Portfolio Web Application for display and sale a specific personell. You can showcase your service with this application and give a superb treatment to patient.',
+        features: ['Full Responsive (mobile, tablet, desktop view)', 'Header with navigation and stylish footer', 'Private Router and Mobile menu Added for better UI', 'Third party login system', 'Firebase Authentication', 'Blog page'],
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'React', 'React Photo View', 'React Router Dom', 'React Hot Toast', 'Firebase', 'Daisy UI', 'Tailwind CSS', 'Express JS', 'Node JS']
     },
     {
         id: 3,
         name: 'Programming School',
         images: [programming_one, programming_two, programming_three],
         desc: 'This is LMS(Learning Management Service) Application by which you can enrich your skills and knowledge.',
-        details: 'Programming School is Learning Management Application Created with MERN Stack. You can buy or sale your course by this website. Authentication is the important part of this application, you can not buy a course without registration.'
+        details: 'Programming School is Learning Management Application Created with MERN Stack. You can buy or sale your course by this website. Authentication is the important part of this application, you can not buy a course without registration.',
+        features: ['Firebase Authentication', 'Responsiveness(mobile, tablet, desktop view)', 'Header with navigation, footer and content', 'Private Route and Courses', 'Hambarger Menu and Third party login system', 'Reset Password functionality', 'Blog, courses pages with attractive content'],
+        technologies: ['HTML5', 'CSS3', 'JavaScript', 'React', 'React to Pdf', 'React Router Dom', 'React Hot Toast', 'Firebase', 'Daisy UI', 'Tailwind CSS', 'Express JS', 'Node JS']
     }
 ];
 
 const ProjectDetails = () => {
     const { id } = useParams();
     const singleProject = projectsData.find(project => project.id == id);
-    console.log(singleProject);
 
     return (
         <div className='my-20'>
@@ -46,38 +51,24 @@ const ProjectDetails = () => {
             </header>
             <div className="mt-10 ml-3">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {/* <div className="card bg-base-100 shadow-xl"> */}
-                        {
-                            singleProject.images.map(image => <figure key={image}><img src={image} alt='project' /></figure>)
-                        }
-                        {/* <div className="card-body">
-                            <h2 className="card-title">
-                                {singleProject.name}
-                                <div className="badge badge-secondary">NEW</div>
-                            </h2>
-                            <p>{singleProject.details}</p>
-                            <div className="card-actions justify-end">
-                                <Link to={`/project/${project.id}`} className="badge badge-outline">View More</Link>
-                            </div>
-                        </div> */}
-                    {/* </div> */}
+                    {
+                        singleProject.images.map(image => <figure key={image}><img src={image} alt='project' /></figure>)
+                    }
                 </div>
                 <div className='my-10'>
                     <h2 className='text-4xl text-blue-900 font-semibold'>{singleProject.name}</h2>
                     <p className='text-xl mt-4'>{singleProject.details}</p>
                     <p className='text-2xl font-semibold mt-4 mb-2'>Features:</p>
                     <ul className='list-disc ml-10'>
-                        <li className='text-lg'>first</li>
-                        <li className='text-lg'>second</li>
-                        <li className='text-lg'>third</li>
+                        {
+                            singleProject.features.map(feature => <li key={feature} className='text-lg'>{feature}</li>)
+                        }
                     </ul>
                     <p className='text-2xl font-semibold mt-4 mb-2'>Technologies:</p>
                     <div className='ml-10'>
-                        <p className='badge badge-outline mr-2 text-lg p-3 text-blue-900 font-semibold'>HTML5</p>
-                        <p className='badge badge-outline mr-2 text-lg p-3 text-blue-900 font-semibold'>CSS3</p>
-                        <p className='badge badge-outline mr-2 text-lg p-3 text-blue-900 font-semibold'>JavaScript</p>
-                        <p className='badge badge-outline mr-2 text-lg p-3 text-blue-900 font-semibold'>Node JS</p>
-                        <p className='badge badge-outline mr-2 text-lg p-3 text-blue-900 font-semibold'>Express</p>
+                        {
+                            singleProject.technologies.map(technology => <p key={technology} className='badge badge-outline mr-2 mb-2 text-lg p-3 text-blue-900 font-semibold'>{technology}</p>)
+                        }
                     </div>
                 </div>
             </div>
